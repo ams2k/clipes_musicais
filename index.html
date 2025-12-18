@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1" />
+ <title>Meus Clips Musicais</title>
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+ <div class="app">
+  <header>
+    <h1>🎵 Clipes Musicais</h1>    
+    <div id="video-count" class="video-count">0</div>
+    <div class="tabs">
+      <button class="tab active" data-tab="videos">🎬 Vídeos</button>
+      <button class="tab" data-tab="artists">🎤 Artistas</button>
+      <button class="tab" data-tab="playlist">📜 Playlist</button>
+      <div id="themeToggle" class="toggle" title="Alterar tema">🌗 Tema</div>      
+    </div>        
+    <hr />
+  </header>
+
+  <main>
+    <section id="videos" class="tab-content active">
+     <div class="controls">
+      <input id="search" class="search" placeholder="Pesquisar por título, artista ou ano" />
+      <div class="topbar">       
+       <div id="playAll" class="toggle" title="Reproduzir tudo">▶ Reproduzir tudo</div>
+      </div>
+     </div>
+     <div id="chips" class="chips-bar"></div>
+     <div id="grid" class="grid"></div>
+    </section>
+    <section id="artists" class="tab-content">
+    <div class="controls">
+      <input id="search-artist" class="search" placeholder="Pesquisar por título ou artista" />
+     </div>
+     <div id="artists-list" class="artists-grid"></div>
+    </section>
+    <section id="playlist" class="tab-content">
+      <div class="playlist-actions">
+       <button class="btn-play-all" id="play-playlist">▶ Play</button>
+       <button class="btn-clear" id="clear-playlist">🗑 Limpar</button>
+      </div>
+      <div id="playlist-list"></div>
+    </section>
+  </main>  
+ </div>
+
+ <!-- Modal player -->
+ <div id="modal" aria-hidden="true">
+  <div class="modal-inner">
+    <div class="player-wrap">
+      <div id="player-iframe"></div>
+    </div>
+    <div class="modal-footer">
+      <button id="prevBtn" class="btn">⏮️ Anterior</button>
+      <button id="playPause" class="btn">⏯️ Pausar</button>
+      <button id="nextBtn" class="btn">⏭️ Próximo</button>
+      <button id="closeBtn" class="btn">⏹️ Fechar</button>
+      <button id="openOnYT" class="btn open-youtube">Abrir no YouTube</button>
+    </div>
+    <div id="errorBox" class="error-banner" style="display:none"></div>
+  </div>
+ </div>
+ 
+ <!-- Loading... -->
+ <div id="loadingSpinner" class="spinner-overlay">
+  <div class="spinner"></div>
+ </div>
+    
+ <!-- javascript do app -->
+ <script src="js/app.js"></script>
+ 
+ <!-- javascript do youtube player -->
+ <script async src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
