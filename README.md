@@ -1,7 +1,5 @@
 # Clipes Musicais
 
-(Em desenvolvimento...)
-
 
 Web page, SPA, traz lista de video clipes musicais no youtube.
 
