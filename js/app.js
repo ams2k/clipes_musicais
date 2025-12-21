@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let manterPlayerAberto = true;
       
   // ----- Elementos -----
-  const grid = document.getElementById('grid');
+  const clipes = document.getElementById('clipes');
   const chips = document.getElementById('chips');
   const search = document.getElementById('search');
   const searchArtists = document.getElementById('search-artist');
@@ -47,8 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPlayPlaylist = document.getElementById('play-playlist');
   const btnClearPlaylist = document.getElementById('clear-playlist');
   
+  //-------------------------------------------------------
   //------------- OBTENÇÃO ASSÍNCRONA DO JSON -------------
-  
+  //-------------------------------------------------------
+
   async function loadClipes(){
     //carrega o json com dados dos clipes
     try {
@@ -66,7 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     return null;
   }//loadClipes()
 
+  //-------------------------------------------------------------------------
   // ---------- BOTÕES SELETORES: VIDEOS, ARTISTAS ou PLAYLIST --------------
+  //-------------------------------------------------------------------------
 
   document.querySelectorAll(".tab").forEach(btn => {
     btn.onclick =() => {
@@ -80,8 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }); //document.querySelectorAll
 
-  // ---------- CRIA OS GÊNEROS MUSICAIS --------------
+
+  //---------------------------------------------------
+  // ----------      THEME TOGGLE        --------------
+  //---------------------------------------------------
   
+  let dark = true;
+  
+  themeToggle.addEventListener('click', ()=>{
+    dark = !dark; if(dark){ document.documentElement.style.setProperty('--accent','#a2a7ff'); } else { document.documentElement.style.setProperty('--accent','#00d4ff'); }
+  });
+
+
+  //------------------------------------------------------------------------------
+  // ---------- CRIA OS GÊNEROS MUSICAIS COM A QUANTIDADE DE CLIPES --------------
+  //------------------------------------------------------------------------------
+
   function renderChips() {
     //monta a lista de gêneros musicais
     chips.innerHTML = '';
@@ -120,7 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });            
   }//renderChips()  
 
+
+  //----------------------------------------------------------------------------
   // ---------- FILTRA OS VÍDEOS PELA PESQUISA OU CLICK NOS CHIPS --------------
+  //----------------------------------------------------------------------------
 
   function applyFilter() {
     //monta a lista de clipes conforme filtragem
@@ -134,20 +155,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     filtered = videos.filter(v => (activeGenre==='Todos' || v.genre===activeGenre) && (`${v.title} ${v.artist} ${v.year}`.toLowerCase().includes(q)));
     
-    renderGrid();
+    renderClipes();
     updateTotal();
     renderArtists();
     localStorage.setItem('genre', activeGenre); //salva o gênero clicado    
   }
 
+
+  //---------------------------------------------------------------
   // ---------- CRIA E EXIBE OS CARDS COM CADA VÍDEO --------------
+  //---------------------------------------------------------------
   
-  function renderGrid(){
+  function renderClipes(){
     //monta a lista de clipes: todos ou conforme pesquisa ou gênero clicado
-    grid.innerHTML = '';
+    clipes.innerHTML = '';
 
     filtered.forEach((v, idx)=>{
       const c = document.createElement('div'); 
+
       c.className='card';
       
       c.innerHTML = `
@@ -157,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="title">${v.title}</div>          
           <div class="sub">${v.artist} • ${v.year}</div>
         </div>
-        <div class="eq" data-idx="${idx}">
+        <div class="eq" data-idclipe="${v.id}">
           <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
         </div>
       `;
@@ -186,16 +211,40 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(idx);
       });
 
-      grid.appendChild(c);
+      clipes.appendChild(c);
     });
-  }//renderGrid()
-  
-  // ---------- ATUALIZA MOSTRADOR TOTAL DE VÍDEOS --------------
+  }//renderClipes()
   
   function updateTotal() {
+    //atualiza o mostrador de total de clipes
     const el = document.getElementById('video-count');
     if (el) el.textContent = `${filtered.length} vídeos`;
-  }
+  }// updateTotal()
+
+  function clipes_EqualizerMarkPlaying(videoId) {
+    //aciona equalizador no clipe indicado
+    const div = document.getElementById("clipes");
+
+    div.querySelectorAll(".eq")
+      .forEach(item => {
+        if (item.dataset.idclipe === videoId){
+          item.classList.add("playing");
+        } else {
+          item.classList.remove("playing");  
+        }
+      });
+  }//clipes_EqualizerMarkPlaying
+  
+  function clipes_EqualizerStopAllPlaying() {
+    //pára (stop) os equalizadores de todos os clipes
+    const div = document.getElementById("clipes");
+
+    div.querySelectorAll(".eq")
+      .forEach(item => {
+         item.classList.remove("playing");        
+      });
+  }//clipes_EqualizerStopAllPlaying  
+
 
   //--------------------------------------------
   // ---------- PLAYER DO YOUTUBE --------------
@@ -270,150 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }//onPlayerError()
 
-  function openModal(idx){
-    if (operacaoSelecionada === Operacao.VIDEOS){
-      if (filtered.length===0) return;
-      currentIndex = idx;
-      const vid = filtered[currentIndex];
-      playYoutubeVideo(vid.id);
-    } else if (operacaoSelecionada = Operacao.PLAYLIST){
-      if (playlist.length===0) return;
-      currentIndex = idx;
-      currentPlaylistIndex = idx;
-      const vid = playlist[currentIndex];
-      playYoutubeVideo(vid.id);
-    }    
-  }//openModal()
-
-  function playYoutubeVideo(video_watch){
-    if (video_watch.length===0) return;
-    modal.style.display='flex';
-    errorBox.style.display='none';
-    openOnYT.style.display='none';
-    
-    // create player for this id
-    if (window.YT && YT.Player){ 
-      createPlayer(video_watch);     
-    } else {
-      // API not loaded yet — store the id and wait
-      playerIframeWrap.innerHTML = `<iframe id="player-iframe-fallback" src="https://www.youtube.com/embed/${video_watch}?autoplay=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;border:0;width:100%;height:100%;"></iframe>`;
-    }    
-  }//playYoutubeVideo()
-
-  function closeModal(){
-    modal.style.display = 'none';
-    
-    if (playerInstance && playerInstance.destroy) { 
-      playerInstance.destroy(); 
-      playerInstance = null; 
-      playerReady = false;     
-    }
-    
-    playerIframeWrap.innerHTML = '';
-    setEqualizer(false, currentVideoId);
-    currentIndex = 0;
-    currentPlaylistIndex = 0;
-  }//closeModal()
-
-  function highlightPlaying(videoId = ""){
-    // add .playing to eq for the current index
-    if (operacaoSelecionada === Operacao.VIDEOS) {
-      document.querySelectorAll('.eq').forEach(el => el.classList.remove('playing'));
-      const eq = document.querySelectorAll('.eq')[currentIndex]; 
-      if (eq) eq.classList.add('playing');
-    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
-      playlist_EqualizerMarkPlaying(videoId);
-    }
-  }//highlightPlaying()
-
-  function setEqualizer(on, videoId = ""){
-    if (operacaoSelecionada === Operacao.VIDEOS){
-      document.querySelectorAll('.eq')
-       .forEach(el => { 
-         if (on) {
-           el.classList.add('playing');         
-         } else {
-           el.classList.remove('playing');     
-         }
-       });               
-    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
-      playlist_EqualizerStopAllPlaying();
-      
-      if (on) {
-        playlist_EqualizerMarkPlaying(videoId); 
-      }     
-    }
-    
-  }//setEqualizer()
-
-  function prev(){
-    if (operacaoSelecionada === Operacao.VIDEOS) {
-      currentIndex = (currentIndex-1+filtered.length) % filtered.length; 
-    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
-      currentIndex = (currentIndex-1+playlist.length) % playlist.length; 
-      currentPlaylistIndex = currentIndex;
-    }
-    
-    loadCurrent();   
-  }
-
-  function next(){
-    if (operacaoSelecionada === Operacao.VIDEOS) {
-      if (currentIndex < filtered.length - 1) {
-         currentIndex = (currentIndex+1) % filtered.length;       
-         loadCurrent();       
-         return;
-      }      
-      if (!manterPlayerAberto) closeModal();
-    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
-      if (currentIndex < playlist.length - 1) {
-        playlist_next();
-        loadCurrent(); 
-        return;
-      }      
-      if (!manterPlayerAberto) closeModal();
-    }        
-  }//next()
-
-  function loadCurrent(){ 
-    let v = undefined;
-    
-    if (operacaoSelecionada === Operacao.VIDEOS) {
-      v = filtered[currentIndex];
-    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
-      v = playlist[currentIndex];
-    }
-    
-    if (!v) return; 
-    
-    if (playerInstance && playerInstance.loadVideoById){ 
-      playerInstance.loadVideoById(v.id);     
-    } else { 
-      playerIframeWrap.innerHTML = `<iframe id="player-iframe-fallback" src="https://www.youtube.com/embed/${v.id}?autoplay=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;border:0;width:100%;height:100%;"></iframe>`;     
-    }
-    
-    currentVideoId = v.id;
-    highlightPlaying(v.id);   
-  }//loadCurrent()
-
-  // Play/pause
-  function togglePlay(){ 
-    if (!playerInstance){ 
-      const f = document.getElementById('player-iframe-fallback'); 
-      if (f){ /* cannot control fallback iframe */ } return;     
-    }
-    
-    const state = playerInstance.getPlayerState();
-    
-    if (state === YT.PlayerState.PLAYING) {
-      playerInstance.pauseVideo();       
-    } else {
-      playerInstance.playVideo();         
-    }
-  }//togglePlay()
-
-  // Open on YouTube fallback
+   
   openOnYT.addEventListener('click', () =>{
+    // Open on YouTube fallback
     if (operacaoSelecionada === Operacao.VIDEOS) {
       const v = filtered[currentIndex]; 
       window.open('https://www.youtube.com/watch?v='+v.id,'_blank');
@@ -455,13 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 
     {passive:true}  
   );
-
-  // Theme toggle (neon/dark transition)
-  let dark = true;
-  themeToggle.addEventListener('click', ()=>{
-    dark = !dark; if(dark){ document.documentElement.style.setProperty('--accent','#a2a7ff'); } else { document.documentElement.style.setProperty('--accent','#00d4ff'); }
-  });
-
+  
   // Play all
   playAllBtn.addEventListener('click', ()=>{ 
     isPlayingAll = !isPlayingAll; 
@@ -473,6 +375,150 @@ document.addEventListener('DOMContentLoaded', () => {
   function onYouTubeIframeAPIReady(){
     // expose globally so YT can call it
   }
+
+
+  //-------------------------------------------------------
+  //--------- controles adicionais para o player ----------
+  //-------------------------------------------------------
+
+  function openModal(idx){
+    //exibe o player em modo modal
+    if (operacaoSelecionada === Operacao.VIDEOS){
+      if (filtered.length===0) return;
+      currentIndex = idx;
+      const vid = filtered[currentIndex];
+      playYoutubeVideo(vid.id);
+    } else if (operacaoSelecionada = Operacao.PLAYLIST){
+      if (playlist.length===0) return;
+      currentIndex = idx;
+      currentPlaylistIndex = idx;
+      const vid = playlist[currentIndex];
+      playYoutubeVideo(vid.id);
+    }    
+  }//openModal()
+
+  function playYoutubeVideo(video_watch){
+    //iniciar um novo clipe no player
+    if (video_watch.length===0) return;
+    modal.style.display='flex';
+    errorBox.style.display='none';
+    openOnYT.style.display='none';
+    
+    // create player for this id
+    if (window.YT && YT.Player){ 
+      createPlayer(video_watch);     
+    } else {
+      // API not loaded yet — store the id and wait
+      playerIframeWrap.innerHTML = `<iframe id="player-iframe-fallback" src="https://www.youtube.com/embed/${video_watch}?autoplay=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;border:0;width:100%;height:100%;"></iframe>`;
+    }    
+  }//playYoutubeVideo()
+
+  function closeModal(){
+    //fecha o player
+    modal.style.display = 'none';
+    
+    if (playerInstance && playerInstance.destroy) { 
+      playerInstance.destroy(); 
+      playerInstance = null; 
+      playerReady = false;     
+    }
+    
+    playerIframeWrap.innerHTML = '';
+    setEqualizer(false, currentVideoId);
+    currentIndex = 0;
+    currentPlaylistIndex = 0;
+  }//closeModal()
+
+  function highlightPlaying(videoId = ""){
+    // inicia o equalizer no clipe que está sendo tocado
+    if (operacaoSelecionada === Operacao.VIDEOS) {
+      clipes_EqualizerStopAllPlaying();
+      clipes_EqualizerMarkPlaying(videoId)
+    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
+      playlist_EqualizerMarkPlaying(videoId);
+    }
+  }//highlightPlaying()
+
+  function setEqualizer(on, videoId = ""){
+    // exibe o equalizer
+    if (operacaoSelecionada === Operacao.VIDEOS){
+      clipes_EqualizerStopAllPlaying();
+      if (on) clipes_EqualizerMarkPlaying(videoId);
+    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
+      playlist_EqualizerStopAllPlaying();      
+      if (on) playlist_EqualizerMarkPlaying(videoId);      
+    }    
+  }//setEqualizer()
+
+  function prev(){
+    // clipe anterior
+    if (operacaoSelecionada === Operacao.VIDEOS) {
+      currentIndex = (currentIndex-1+filtered.length) % filtered.length; 
+    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
+      currentIndex = (currentIndex-1+playlist.length) % playlist.length; 
+      currentPlaylistIndex = currentIndex;
+    }
+    
+    loadCurrent();   
+  }
+
+  function next(){
+    //próximo clipe
+    if (operacaoSelecionada === Operacao.VIDEOS) {
+      if (currentIndex < filtered.length - 1) {
+         currentIndex = (currentIndex+1) % filtered.length;       
+         loadCurrent();       
+         return;
+      }      
+      if (!manterPlayerAberto) closeModal();
+    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
+      if (currentIndex < playlist.length - 1) {
+        playlist_next();
+        loadCurrent(); 
+        return;
+      }      
+      if (!manterPlayerAberto) closeModal();
+    }        
+  }//next()
+
+  function loadCurrent(){ 
+    //carga do clipe no player
+    let v = undefined;
+    
+    if (operacaoSelecionada === Operacao.VIDEOS) {
+      v = filtered[currentIndex];
+    } else if (operacaoSelecionada === Operacao.PLAYLIST) {
+      v = playlist[currentIndex];
+    }
+    
+    if (!v) return; 
+    
+    if (playerInstance && playerInstance.loadVideoById){ 
+      playerInstance.loadVideoById(v.id);     
+    } else { 
+      playerIframeWrap.innerHTML = `<iframe id="player-iframe-fallback" src="https://www.youtube.com/embed/${v.id}?autoplay=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;border:0;width:100%;height:100%;"></iframe>`;     
+    }
+    
+    currentVideoId = v.id;
+    highlightPlaying(v.id);   
+  }//loadCurrent()
+
+  function togglePlay(){ 
+    //play/pausa no clipe que está sendo tocado
+    if (!playerInstance){ 
+      const f = document.getElementById('player-iframe-fallback'); 
+      if (f){ /* cannot control fallback iframe */ } return;     
+    }
+    
+    const state = playerInstance.getPlayerState();
+    
+    if (state === YT.PlayerState.PLAYING) {
+      playerInstance.pauseVideo();       
+    } else {
+      playerInstance.playVideo();         
+    }
+  }//togglePlay()
+ 
   
   //------------------------------------
   //------------- ARTISTAS -------------
@@ -482,7 +528,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //const container = document.querySelector(".artists-grid");
     const c = document.getElementById("artists-list");
     c.innerHTML = "";
-    const artistas = {};
+    const artistas = [];
+    let count = 0;
     
     const q = searchArtists.value.trim().toLowerCase(); //valor do campo de pesquisa
                 
@@ -491,10 +538,13 @@ document.addEventListener('DOMContentLoaded', () => {
           (v.title || "").toLowerCase().includes(q) ||
           String(v.year).includes(q)
          ) {
-           if(!artistas[v.artist]) artistas[v.artist]=[];
+           if (!artistas[v.artist]) {
+            artistas[v.artist] = [];
+            count++;
+           }
            artistas[v.artist].push(v);
       }//if      
-    });    
+    });     
 
     Object.keys(artistas)
       .sort((a, b) => a.localeCompare(b, 'pt-BR', { sensitivity: 'base' })) // ordena pelo nome do artista
@@ -521,8 +571,8 @@ document.addEventListener('DOMContentLoaded', () => {
           c.appendChild(div);
     });//forEach
     
-    if (artistas.length>0){
-      document.querySelector('[data-tab="artists"]').textContent = `🎤 Artistas (${artistas.length})`;
+    if (count>0){
+      document.querySelector('[data-tab="artists"]').textContent = `🎤 Artistas (${count})`;
     } else {
       document.querySelector('[data-tab="artists"]').textContent = `🎤 Artistas`;
     }
@@ -595,14 +645,15 @@ document.addEventListener('DOMContentLoaded', () => {
       div.className="playlist-card";
       div.innerHTML = `
        <img class="artist-cover" src="https://img.youtube.com/vi/${a.id}/hqdefault.jpg">
-       <div class="eq_playlist" data-id="${a.id}">
+       <div class="eq_playlist" data-videoid="${a.id}">
         <span></span><span></span><span></span><span></span>
        </div>
        <div class="artist-info">
-        <h3>${a.artist}</h3><ul></ul>
+        <h3>${a.artist}</h3>
+        <ul></ul>
        </div>       
       `;
-      
+      //console.log(`playlist: ${a.id}`);
       const ul = div.querySelector("ul");    
       const li = document.createElement("li");
       
@@ -659,11 +710,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }//updatePlaylistActions
   
   function playlist_EqualizerMarkPlaying(videoId) {
-    const pl = document.querySelector(".playlist-card");
-    pl.querySelectorAll(".eq_playlist")
+    const div = document.getElementById("playlist-list");
+
+    div.querySelectorAll(".eq_playlist")
       .forEach(item => {
-        /* item.classList.toggle("playlist_playing", item.dataset.id === videoId); */        
-        if (item.dataset.id === videoId){
+        /* item.classList.toggle("playlist_playing", item.dataset.videoid === videoId); */
+        if (item.dataset.videoid === videoId){
           item.classList.add("playlist_playing");
         } else {
           item.classList.remove("playlist_playing");  
@@ -672,8 +724,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }//playlist_EqualizerMarkPlaying
   
   function playlist_EqualizerStopAllPlaying() {
-    const pl = document.querySelector(".playlist-card");
-    pl.querySelectorAll(".eq_playlist")
+    const div = document.getElementById("playlist-list");
+
+    div.querySelectorAll(".eq_playlist")
       .forEach(item => {
          item.classList.remove("playlist_playing");        
       });
