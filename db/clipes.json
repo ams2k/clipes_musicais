@@ -333,7 +333,7 @@
     "title": "Nightshift", 
     "artist": "Commodores", 
     "year": 1985, 
-    "genre": "Soul" 
+    "genre": "Romântica" 
   },
   {
     "id":  "1EORbL8N-R8", 
@@ -1005,7 +1005,7 @@
     "title": "There's No Stopping Us", 
     "artist": "Ollie & Jerry", 
     "year": 1984, 
-    "genre": "Pop" 
+    "genre": "Funk" 
   },
   {
     "id":  "nfk6sCzRTbM", 
@@ -1790,5 +1790,117 @@
     "artist": "Juice Newton", 
     "year": 1981, 
     "genre": "Pop" 
+  },
+  {
+    "id":  "3Mk70c9s1d8", 
+    "title": "Almost Paradise", 
+    "artist": "Mike Reno & Ann Wilson", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "i6iBAuwBODA", 
+    "title": "Too Much Heaven", 
+    "artist": "Bee Gees", 
+    "year": 1979, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "fkvMuTaxXlo", 
+    "title": "Fui Eu", 
+    "artist": "José Augusto", 
+    "year": 1988, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "Or0Fket17AY", 
+    "title": "Aguenta Coração", 
+    "artist": "José Augusto", 
+    "year": 1986, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "75wbW7LehC4", 
+    "title": "Sonho Por Sonho", 
+    "artist": "José Augusto", 
+    "year": 1986, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "7oWgjj_mbn0", 
+    "title": "Amigo", 
+    "artist": "Roberto Carlos", 
+    "year": 1977, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "8Ms3mJFkSeg", 
+    "title": "Lost In Your Eyes", 
+    "artist": "Debbie Gibson", 
+    "year": 1989, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "UsqDoz2Co4o", 
+    "title": "Endless Love", 
+    "artist": "Lionel Richie", 
+    "year": 1982, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "KsH63qJlIMM", 
+    "title": "On My Own", 
+    "artist": "Patti LaBelle", 
+    "year": 1986, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "QzZ-mtE1EHc", 
+    "title": "I Wanna Dance", 
+    "artist": "Whitney Houston", 
+    "year": 1987, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "lBlx1JffMQ4", 
+    "title": "The Captain Of Her Heart", 
+    "artist": "Double", 
+    "year": 1985, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "A_MjCqQoLLA", 
+    "title": "Hey Jude", 
+    "artist": "The Beatles", 
+    "year": 1968, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "axMwzpJ7RTk", 
+    "title": "Hey Jude", 
+    "artist": "Kiko Zambianhi", 
+    "year": 1989, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "wBBTkS1R5So", 
+    "title": "Primeiros Erros", 
+    "artist": "Kiko Zambianhi", 
+    "year": 1985, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "AuddjXorQus", 
+    "title": "Rolam as Pedras", 
+    "artist": "Kiko Zambianhi", 
+    "year": 1984, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "JWydvOt7BR0", 
+    "title": "Eu Nasci Há 10 Mil Anos Atrás", 
+    "artist": "Raul Seixas", 
+    "year": 1976, 
+    "genre": "MPB" 
   }
 ]
