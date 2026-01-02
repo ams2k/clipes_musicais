@@ -1902,5 +1902,82 @@
     "artist": "Raul Seixas", 
     "year": 1976, 
     "genre": "MPB" 
+  },
+  {
+    "id":  "scOZcxXbmOA", 
+    "title": "Só Pro Meu Prazer", 
+    "artist": "Heróis da Resistência", 
+    "year": 1986, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "iOs9Osz3UFQ", 
+    "title": "Imagine", 
+    "artist": "John Lennon", 
+    "year": 1971, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Dq_dDiLZl38", 
+    "title": "World's Famous", 
+    "artist": "Malcolm McLaren", 
+    "year": 1983, 
+    "genre": "Funk" 
+  },
+  {
+    "id":  "qcE1zyViZE0", 
+    "title": "Buffalo Gals", 
+    "artist": "Malcolm McLaren", 
+    "year": 1983, 
+    "genre": "Funk" 
+  },
+  {
+    "id":  "ZhfWiU8wGCc", 
+    "title": "Woman", 
+    "artist": "John Lennon", 
+    "year": 1981, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "XccFisiPveg", 
+    "title": "Empty Garden", 
+    "artist": "Elton John", 
+    "year": 1982, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "Qy7z_oiN6nQ", 
+    "title": "Nothing's Gonna Change My Love For You", 
+    "artist": "George Benson", 
+    "year": 1985, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "e_gvUiwsE6Q", 
+    "title": "I Started A Joke", 
+    "artist": "Bee Gees", 
+    "year": 1968, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "bZolfKgW5Is", 
+    "title": "Immortality", 
+    "artist": "Bee Gees", 
+    "year": 1997, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "U_DNfvRTlME", 
+    "title": "Wish You Were Here", 
+    "artist": "Bee Gees", 
+    "year": 1989, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "zTcu7MCtuTs", 
+    "title": "If You Don't Know Me By Now", 
+    "artist": "Simply Red", 
+    "year": 1989, 
+    "genre": "Romântica" 
   }
 ]
