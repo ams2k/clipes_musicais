@@ -1464,9 +1464,17 @@
   },
   {
     "id":  "K1x1fQDEYPI", 
-    "title": "That's What Friands Are For", 
+    "title": "That's What Friends Are For", 
     "artist": "Dionne Warwick", 
     "year": 1982, 
+    "genre": "Pop" 
+  },
+  ,
+  {
+    "id":  "LO9NP-SiT8s", 
+    "title": "I'll Niver Love This Way Again", 
+    "artist": "Dionne Warwick", 
+    "year": 1979, 
     "genre": "Pop" 
   },
   {
@@ -1979,5 +1987,243 @@
     "artist": "Simply Red", 
     "year": 1989, 
     "genre": "Romântica" 
+  },
+  {
+    "id":  "2HHFPojl-Vk", 
+    "title": "Making Love Out Of Nothing At All", 
+    "artist": "Air SUpply", 
+    "year": 1983, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "5cqzchvm9FQ", 
+    "title": "True", 
+    "artist": "Apandau Ballet", 
+    "year": 1983, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "b_zHQ6kFuQ0", 
+    "title": "The Power Of Love", 
+    "artist": "Jennifer Rush", 
+    "year": 1984, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "CRfy1yorkec", 
+    "title": "You're The Inspiration", 
+    "artist": "Chicago", 
+    "year": 1984, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "H3ZcxBsjTh4", 
+    "title": "Save Me", 
+    "artist": "Remy Zero", 
+    "year": 2001, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "JWdZEumNRmI", 
+    "title": "All Out Of Love", 
+    "artist": "Air Supply", 
+    "year": 1980, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "sjGl-pq4RxQ", 
+    "title": "Big In Japan", 
+    "artist": "Alphaville", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "epOBenUjIHw", 
+    "title": "Invisble Touch", 
+    "artist": "Genesis", 
+    "year": 1986, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "SWSQS06i7-w", 
+    "title": "Against All Odds", 
+    "artist": "Phil Collins", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "hsA2UR42Pbw", 
+    "title": "Automatic", 
+    "artist": "The Pointer Sisters", 
+    "year": 1983, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "rSaC-YbSDpo", 
+    "title": "Bordeline", 
+    "artist": "Madonna", 
+    "year": 1983, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "SWjBFhJr7bk", 
+    "title": "Dr. Beat", 
+    "artist": "Gloria Estefan", 
+    "year": 1986, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "J1x1WGtePSE", 
+    "title": "Don't Wanna Lose You", 
+    "artist": "Gloria Estefan", 
+    "year": 1989, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Fe93CLbHjxQ", 
+    "title": "Ghostbusters", 
+    "artist": "Ray Parker Jr.", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "bWcASV2sey0", 
+    "title": "Holding Out For A Hero", 
+    "artist": "Bonnie Tyler", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "qWEFNFsFrgE", 
+    "title": "I Should Known Better", 
+    "artist": "Jim Diamond", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "SwYN7mTi6HM", 
+    "title": "Jump", 
+    "artist": "Van Halen", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "rgc_LRjlbTU", 
+    "title": "One Night In Bangkok", 
+    "artist": "Murray Head", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "mrudT410TAI", 
+    "title": "Killing Me Softly With His Song", 
+    "artist": "Roberta Flack", 
+    "year": 1973, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "0Q8az-0xnVA", 
+    "title": "Lady, Lady, Lady", 
+    "artist": "Joe Esposito", 
+    "year": 1983, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "Ta_sDZ0sov8", 
+    "title": "Pra Sempre Vou Te Amar", 
+    "artist": "Netinho", 
+    "year": 1999, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "edu5g0cwAtc", 
+    "title": "Unchained Melody", 
+    "artist": "The Righteous Brother", 
+    "year": 1965, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "2i6U8bK1or0", 
+    "title": "Give a Litle Love For Love", 
+    "artist": "The Stylistics", 
+    "year": 1984, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "1A0MPWseJIE", 
+    "title": "Hard To Say I'm Sorry", 
+    "artist": "Chicago", 
+    "year": 1982, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "x34icYC8zA0", 
+    "title": "A Litle Respect", 
+    "artist": "Erasure", 
+    "year": 1988, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "n8b_l4fjDI4", 
+    "title": "Wishing On a Star", 
+    "artist": "The Cover Girls", 
+    "year": 1992, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "0-EF60neguk", 
+    "title": "Nothing Compares 2U", 
+    "artist": "Sinead O'Connor", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "G-ZDKirjQgM", 
+    "title": "Without You", 
+    "artist": "Harry Nilsson", 
+    "year": 1972, 
+    "genre": "Romântica" 
+  },
+  {
+    "id":  "J9gKyRmic20", 
+    "title": "Don't Dream It's Over", 
+    "artist": "Crowded House", 
+    "year": 1986, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "2aJ2Vh_e2dQ", 
+    "title": "Easy Lover", 
+    "artist": "Phil Collins", 
+    "year": 1984, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "K7XAtwidv1A", 
+    "title": "Conga", 
+    "artist": "Miami Sound Machine", 
+    "year": 1985, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "hk8ul2uJA5E", 
+    "title": "Bady Boys", 
+    "artist": "Miami Sound Machine", 
+    "year": 1985, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "y-H895vrIU8", 
+    "title": "Rock Me Amadeus", 
+    "artist": "Falco", 
+    "year": 1986, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "iPfSVkVKy6Q", 
+    "title": "Rehab", 
+    "artist": "Amy Winehouse", 
+    "year": 2006, 
+    "genre": "Pop" 
   }
 ]
