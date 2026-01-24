@@ -2224,5 +2224,54 @@
     "artist": "Amy Winehouse", 
     "year": 2006, 
     "genre": "Pop" 
+  },
+  {
+    "id":  "DvacjsoiXc0", 
+    "title": "Bady Can I Hold You", 
+    "artist": "Tracy Chapman", 
+    "year": 1988, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "EtP_mOlPBSs", 
+    "title": "You've Lost That Loving Feeling", 
+    "artist": "Bill Meddly", 
+    "year": 1964, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "mJpymZpk-t8", 
+    "title": "D.I.S.C.O.", 
+    "artist": "Ottawan", 
+    "year": 1979, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "JChWZ_INhzo", 
+    "title": "Porto Solidão", 
+    "artist": "Jessé", 
+    "year": 1985, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "QDVuT8d9VEQ", 
+    "title": "Voa Liberdade", 
+    "artist": "Jessé", 
+    "year": 1985, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "xqTBlft8gQA", 
+    "title": "Da, Da, Da", 
+    "artist": "Trio", 
+    "year": 1982, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "qLmDgBqOkKE", 
+    "title": "Mordida de Amor", 
+    "artist": "Yahoo", 
+    "year": 1988, 
+    "genre": "MPB" 
   }
 ]
