@@ -2273,5 +2273,33 @@
     "artist": "Yahoo", 
     "year": 1988, 
     "genre": "MPB" 
+  },
+  {
+    "id":  "runYpdl9Zt8", 
+    "title": "Anjo", 
+    "artist": "Yahoo", 
+    "year": 1988, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "oLv8ZPZrbf4", 
+    "title": "Whisky a Go Go", 
+    "artist": "Roupa Nova", 
+    "year": 1984, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "gFTgHGc0kVY", 
+    "title": "It Must Have Been Love", 
+    "artist": "Roxette", 
+    "year": 1987, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "60ItHLz5WEA", 
+    "title": "Faded", 
+    "artist": "Alan Walker", 
+    "year": 2015, 
+    "genre": "Pop" 
   }
 ]
