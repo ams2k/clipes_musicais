@@ -658,13 +658,6 @@
     "genre": "Pop" 
   },
   {
-    "id":  "BT5pHWoS8W8", 
-    "title": "You And I", 
-    "artist": "Sandra", 
-    "year": 1985, 
-    "genre": "Romântica" 
-  },
-  {
     "id":  "PT3azbKHJZU", 
     "title": "Aquarela", 
     "artist": "Toquinho", 
@@ -1785,7 +1778,7 @@
     "genre": "Pop" 
   },
   {
-    "id":  "1XUnkmYYjco", 
+    "id":  "PNoMjJhtPSU", 
     "title": "Boys Do Fall In Love", 
     "artist": "Robin Gibb", 
     "year": 1984, 
@@ -2300,6 +2293,342 @@
     "title": "Faded", 
     "artist": "Alan Walker", 
     "year": 2015, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Cv9-d6idR5s", 
+    "title": "Olhos Vermelhos", 
+    "artist": "Guilherme Arantes", 
+    "year": 1986, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "u1bObyCEG8U", 
+    "title": "Cheia de Charme", 
+    "artist": "Guilherme Arantes", 
+    "year": 1985, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "LbsGxZc1ic4", 
+    "title": "Meu Mundo e Nada Mais", 
+    "artist": "Guilherme Arantes", 
+    "year": 1976, 
+    "genre": "MPB" 
+  },
+  {
+    "id":  "bjrOcrisGyI", 
+    "title": "Up Where We Belong", 
+    "artist": "Joe Cocker", 
+    "year": 1982, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "YB4iR8afWQw", 
+    "title": "Hold Me Till The Morning Comes", 
+    "artist": "Paul Anka & Peter Cetera", 
+    "year": 1983, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "HN9pMgtoy7o", 
+    "title": "Hard To Say I'm Sorry", 
+    "artist": "Peter Cetera", 
+    "year": 2017, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "dxl2r6GuL2w", 
+    "title": "Baby Jane", 
+    "artist": "Rod Stewart", 
+    "year": 1983, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "yRYFKcMa_Ek", 
+    "title": "Maneater", 
+    "artist": "Dary Hall & John Oates", 
+    "year": 1982, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "1Cw1ng75KP0", 
+    "title": "Alone", 
+    "artist": "Heart", 
+    "year": 1987, 
+    "genre": "Pop" 
+  },
+  {
+    "id":  "p3j2NYZ8FKs", 
+    "title": "West And Girls", 
+    "artist": "Pet Shop Boys", 
+    "year": 1986,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "VbD_kBJc_gI", 
+    "title": "Let's Dance", 
+    "artist": "David Bowie", 
+    "year": 1983,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "HG7I4oniOyA", 
+    "title": "Why", 
+    "artist": "Annie Lennox", 
+    "year": 1992,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "uhCX0BinDbc", 
+    "title": "When You're Gone", 
+    "artist": "Maggie Macneal", 
+    "year": 1976,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "c_O4QFF35HQ", 
+    "title": "Sacrifice", 
+    "artist": "Elton John", 
+    "year": 1989,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Ye7FKc1JQe4", 
+    "title": "Shout", 
+    "artist": "Tears For Fears", 
+    "year": 1984,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "t4H_Zoh7G5A", 
+    "title": "On The Floor", 
+    "artist": "Jennifer Lopez, Pitbull", 
+    "year": 2011,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "OG0AvwM_QAI", 
+    "title": "My Oh My", 
+    "artist": "Aqua", 
+    "year": 1997,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "V3YOaXvMmhk", 
+    "title": "Et si tu n'existais pas", 
+    "artist": "Joe Dassin", 
+    "year": 1975,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "EC6ZVvshpuw", 
+    "title": "She's A Lady", 
+    "artist": "Tom Jones", 
+    "year": 1971,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Epj84QVw2rc", 
+    "title": "Come Undone", 
+    "artist": "Duran Duran", 
+    "year": 1993,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "tqp_wbYLsYQ", 
+    "title": "I'd Love You To Want Me", 
+    "artist": "Lobo", 
+    "year": 1972,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "kxNJV83EMJw", 
+    "title": "Hang On Top Your Love", 
+    "artist": "Sade", 
+    "year": 1984,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "xncyDs1C8qY", 
+    "title": "Let's Twist Again", 
+    "artist": "Chubby Checker", 
+    "year": 1961,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "ngp8Q4gPBTA", 
+    "title": "Believe", 
+    "artist": "Cher", 
+    "year": 1998,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "AIBv2GEnXlc", 
+    "title": "Never Tear Us Apart", 
+    "artist": "Inxs", 
+    "year": 1991,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "j2MKruOIQVY", 
+    "title": "Be My Baby", 
+    "artist": "The Ronettes", 
+    "year": 1963,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Lp2qcCrdBLA", 
+    "title": "Brother Louie", 
+    "artist": "Modern Talking", 
+    "year": 1998,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "eNvUS-6PTbs", 
+    "title": "Cheri Cheri Lady", 
+    "artist": "Modern Talking", 
+    "year": 1998,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "qVTWC11zGJs", 
+    "title": "Manic Monday", 
+    "artist": "The Bangles", 
+    "year": 1986,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "EQDHCyFe2rY", 
+    "title": "Reality", 
+    "artist": "Richard Sanderson", 
+    "year": 1980,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "3zYiON0HB7o", 
+    "title": "Am I The Same Girl", 
+    "artist": "Swing Out Sister", 
+    "year": 1992,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "CZVUzho-nok", 
+    "title": "If I Can't Have You", 
+    "artist": "Yvonne Elliman", 
+    "year": 1977,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "VB28IDQlH58", 
+    "title": "Baby I Love Your Way", 
+    "artist": "Will To Power", 
+    "year": 1989,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "VIvAmpfF1Xo", 
+    "title": "Can't Fight This Feeling", 
+    "artist": "REO Speedwagon", 
+    "year": 1984,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "n4RjJKxsamQ", 
+    "title": "Wind Of Change", 
+    "artist": "Scorpions", 
+    "year": 1991,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "VZrhXYQB42g", 
+    "title": "Rock And Roll Lullaby", 
+    "artist": "B. J. Thomas", 
+    "year": 1972,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "Cj9Sr2c4r-0", 
+    "title": "Alvorada Voraz - RPM", 
+    "artist": "RPM", 
+    "year": 1985,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "tYSDXRcI07Y", 
+    "title": "Dois", 
+    "artist": "Paulo Ricardo - RPM", 
+    "year": 1997,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "tcC9Xz3xPA8", 
+    "title": "Anjo Azul", 
+    "artist": "Marquinhos Moura", 
+    "year": 1987,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "2CsgSkafars", 
+    "title": "Quatro Semanas de Amor", 
+    "artist": "Luan & Vanessa", 
+    "year": 1990,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "Y8HOfcYWZoo", 
+    "title": "The Power Of Love", 
+    "artist": "Céline Dion", 
+    "year": 1993,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "JVpTp8IHdEg", 
+    "title": "Hear Me Now", 
+    "artist": "Alok, Bruno Martini", 
+    "year": 2017,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "iyLdoQGBchQ", 
+    "title": "Lambada", 
+    "artist": "Kaoma", 
+    "year": 1989,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "2GoEMEPgsAA", 
+    "title": "In The Heat Of The Night", 
+    "artist": "Sandra", 
+    "year": 1985,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "-RyYXoT7wmw", 
+    "title": "You And I", 
+    "artist": "Sandra", 
+    "year": 1985,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "gFrd3WiOcPc", 
+    "title": "That's The Way, I Like It", 
+    "artist": "KC & The Sunshine Band", 
+    "year": 1977,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "7YvAYIJSSZY", 
+    "title": "Somebody's Watching Me", 
+    "artist": "Rockwell", 
+    "year": 1984,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "6YraW1ZFcyE", 
+    "title": "I'll Fly With You", 
+    "artist": "Gigi D'Agostino & Nicole Cross", 
+    "year": 1999,
     "genre": "Pop" 
   }
 ]
