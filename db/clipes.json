@@ -994,7 +994,7 @@
     "genre": "Romântica" 
   },
   {
-    "id":  "7_pzk83luwo", 
+    "id":  "FdEIcQWr2yI", 
     "title": "There's No Stopping Us", 
     "artist": "Ollie & Jerry", 
     "year": 1984, 
@@ -2630,5 +2630,89 @@
     "artist": "Gigi D'Agostino & Nicole Cross", 
     "year": 1999,
     "genre": "Pop" 
-  }
+  },
+  {
+    "id":  "lU9p1WRfA9w", 
+    "title": "She's Like The Wind", 
+    "artist": "Patrick Swayze", 
+    "year": 1987,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "lWaLwhw8dtM", 
+    "title": "Never Gonna Let You Go", 
+    "artist": "Sérgio Mendes", 
+    "year": 1983,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "-wZl_ZhnVg4", 
+    "title": "Can't Get Over", 
+    "artist": "Kasino", 
+    "year": 2005,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "B4uDvG2VqdY", 
+    "title": "Deborah", 
+    "artist": "Jon Anderson & Vangelis", 
+    "year": 1983,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "n-1tdSYsWi8", 
+    "title": "Self Pity", 
+    "artist": "Margriet Eshuijs", 
+    "year": 1978,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "uvXeeus94GY", 
+    "title": "Don't Let Me Be Misunderstood", 
+    "artist": "Santa Esmeralda", 
+    "year": 1977,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "SkypZuY6ZvA", 
+    "title": "Night Fever", 
+    "artist": "Bee Gees", 
+    "year": 1977,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "x8no2UG-oZ0", 
+    "title": "Shake, Shake, Shake", 
+    "artist": "KC & The Sunshine Band", 
+    "year": 1976,
+    "genre": "Funk" 
+  },
+  {
+    "id":  "n7YQGHHGoXg", 
+    "title": "Love Unlimited", 
+    "artist": "Barry White", 
+    "year": 1973,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "XT5jbXzpdAE", 
+    "title": "Never Knew Love Like This Before", 
+    "artist": "Stephanie Mills", 
+    "year": 1980,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "jqC1iAOfwlc", 
+    "title": "I'm So Glad That I'm A Woman", 
+    "artist": "Love Unlimited Orchestra", 
+    "year": 1979,
+    "genre": "Funk" 
+  },
+  {
+    "id":  "aCWCF19nUhA", 
+    "title": "Genius of Love", 
+    "artist": "Tom Tom Club", 
+    "year": 1981,
+    "genre": "Funk" 
+  }  
 ]
