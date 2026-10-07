@@ -2653,7 +2653,7 @@
     "genre": "Pop" 
   },
   {
-    "id":  "B4uDvG2VqdY", 
+    "id":  "hxH4pa8i5Pc", 
     "title": "Deborah", 
     "artist": "Jon Anderson & Vangelis", 
     "year": 1983,
@@ -2713,6 +2713,118 @@
     "title": "Genius of Love", 
     "artist": "Tom Tom Club", 
     "year": 1981,
-    "genre": "Funk" 
-  }  
+    "genre": "Pop" 
+  },
+  {
+    "id":  "znDgBy2mHbc", 
+    "title": "Everybody Wants To Rule The World", 
+    "artist": "Tears For Fears", 
+    "year": 1985,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "UyJox7NOrZk", 
+    "title": "Is This The End", 
+    "artist": "New Edition", 
+    "year": 1983,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "3wxyN3z9PL4", 
+    "title": "Nothing's Gonna Stop Us Now", 
+    "artist": "Starship", 
+    "year": 1987,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "L60qWVke-Sc", 
+    "title": "Lança Perfume", 
+    "artist": "Rita Lee", 
+    "year": 1980,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "oyikMlvYTC8", 
+    "title": "Ragatanga", 
+    "artist": "Rouge", 
+    "year": 2002,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "FBlLyLrQH7k", 
+    "title": "Classic", 
+    "artist": "Adrian Gurvits", 
+    "year": 1982,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "JA3vMBxLeMY", 
+    "title": "Fairy Tale", 
+    "artist": "Shaman", 
+    "year": 2002,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "MMSl_fDbALE", 
+    "title": "Um dia de Domingo", 
+    "artist": "Tim Maia e Gal Costa", 
+    "year": 1985,
+    "genre": "MPB" 
+  },
+  {
+    "id":  "d73tiBBzvFM", 
+    "title": "All That She Wants", 
+    "artist": "Ace of Base", 
+    "year": 1983,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "9UaJAnnipkY", 
+    "title": "Born to Be Alive", 
+    "artist": "Patrick Hernandez", 
+    "year": 1978,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "S_E2EHVxNAE", 
+    "title": "Right Here Waiting", 
+    "artist": "Richard Marx", 
+    "year": 1989,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "BeUSuSXBqMQ", 
+    "title": "Murmures", 
+    "artist": "Richard Clayderman", 
+    "year": 1981,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "d_W1IePVBsg", 
+    "title": "Torneró", 
+    "artist": "I Santo California", 
+    "year": 1974,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "comxlhHbEhc", 
+    "title": "Let's Try It Again", 
+    "artist": "New Kids on the Block", 
+    "year": 1990,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "NGrLb6W5YOM", 
+    "title": "All By Myself", 
+    "artist": "Céline Dion", 
+    "year": 1996,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "umvXMeRwTCc", 
+    "title": "All By Myself", 
+    "artist": "Eric Carmen", 
+    "year": 1975,
+    "genre": "Pop" 
+  }   
 ]
