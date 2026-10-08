@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ARTISTS: 'ARTISTS',
     PLAYLIST: 'PLAYLIST'
   });
+  
+  const themes = {
+    LIGHT: 'light',
+    DARK: 'dark',
+    SYSTEM: 'system'
+  };
 
   var operacaoSelecionada = Operacao.VIDEOS;
 
@@ -89,12 +95,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // ----------      THEME TOGGLE        --------------
   //---------------------------------------------------
   
-  let dark = true;
-  
-  themeToggle.addEventListener('click', ()=>{
-    dark = !dark; if(dark){ document.documentElement.style.setProperty('--accent','#a2a7ff'); } else { document.documentElement.style.setProperty('--accent','#00d4ff'); }
+  themeToggle.addEventListener('click', ()=> {
+    defineTema();    
   });
-
+  
+  function defineTema() {    
+    let theme = localStorage.getItem('theme') || themes.DARK;
+        
+    // if ( !Object.values(themes).includes(theme) ) {
+    //     theme = 'dark'; 
+    //     themeToggle.textContent = "☀️ Tema"; 
+    // }    
+    
+    if (theme === 'light') { 
+       theme = 'dark';
+       themeToggle.textContent =  "☀️ Tema"; 
+    } else {
+       theme = 'light';
+       themeToggle.textContent = "🌙 Tema"; 
+    }
+        
+    document.documentElement.setAttribute('data-theme', theme);      
+        
+    localStorage.setItem('theme', theme); 
+    console.log('theme', theme);
+  }
 
   //------------------------------------------------------------------------------
   // ---------- CRIA OS GÊNEROS MUSICAIS COM A QUANTIDADE DE CLIPES --------------
@@ -742,6 +767,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //------------- INICIALIZAÇÃO -------------
   //-----------------------------------------
 
+  //----- aplica o tema salvo -----
+  
+  defineTema();
+  
+  //----- Carga dos clipes contidos em db/clipes.json -----
+  
   loadClipes()
     .then(data => {
       videos = data;
