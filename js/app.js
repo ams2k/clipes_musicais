@@ -96,29 +96,47 @@ document.addEventListener('DOMContentLoaded', () => {
   //---------------------------------------------------
   
   themeToggle.addEventListener('click', ()=> {
-    defineTema();    
-  });
-  
-  function defineTema() {    
+    
     let theme = localStorage.getItem('theme') || themes.DARK;
         
+    if (theme === themes.LIGHT) { 
+     
+       theme = themes.DARK;
+       themeToggle.textContent =  "☀️ Tema";
+       
+    } else {
+     
+       theme = themes.LIGHT;
+       themeToggle.textContent = "🌙 Tema";
+    }        
+    
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    localStorage.setItem('theme', theme);
+
+  });
+  
+  function defineTema() {
+    
+    let theme = localStorage.getItem('theme') || themes.LIGHT;
+                
     // if ( !Object.values(themes).includes(theme) ) {
     //     theme = 'dark'; 
-    //     themeToggle.textContent = "☀️ Tema"; 
-    // }    
-    
-    if (theme === 'light') { 
-       theme = 'dark';
-       themeToggle.textContent =  "☀️ Tema"; 
+    //     themeToggle.textContent = "🌗 Tema"; 
+    // }
+               
+    if (theme === themes.LIGHT) { 
+      
+        themeToggle.textContent = "🌙 Tema";   
+      
     } else {
-       theme = 'light';
-       themeToggle.textContent = "🌙 Tema"; 
+      
+        themeToggle.textContent =  "☀️ Tema";   
     }
-        
-    document.documentElement.setAttribute('data-theme', theme);      
-        
-    localStorage.setItem('theme', theme); 
-    console.log('theme', theme);
+    
+    document.documentElement.setAttribute('data-theme', theme);
+     
+    //console.log('theme-lido', theme);
   }
 
   //------------------------------------------------------------------------------
@@ -789,8 +807,8 @@ document.addEventListener('DOMContentLoaded', () => {
       activeGenre = localStorage.getItem('genre') || 'Todos'; 
       
       // ----- Gêneros Musicais -----
-      genres = ['Todos', ...Array.from(new Set(videos.map(v => v.genre)))];     
-    
+      genres = ['Todos', ...Array.from(new Set(videos.map(v => v.genre)))];   
+          
       //cria chips de gêneros musicais com a quantidade
       renderChips(); 
       
