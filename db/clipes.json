@@ -2052,7 +2052,7 @@
   },
   {
     "id":  "rSaC-YbSDpo", 
-    "title": "Bordeline", 
+    "title": "Borderline", 
     "artist": "Madonna", 
     "year": 1983, 
     "genre": "Pop" 
@@ -2825,6 +2825,20 @@
     "title": "All By Myself", 
     "artist": "Eric Carmen", 
     "year": 1975,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "DHutZXREZ0E", 
+    "title": "Crazy For You", 
+    "artist": "Madonna", 
+    "year": 1985,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "3gepz0yfMBw", 
+    "title": "That's Why You Go Away", 
+    "artist": "Michael Lerns", 
+    "year": 1995,
     "genre": "Pop" 
   }   
 ]
