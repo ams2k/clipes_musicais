@@ -2450,7 +2450,7 @@
     "genre": "Pop" 
   },
   {
-    "id":  "xncyDs1C8qY", 
+    "id":  "KxQZQ86jJHg", 
     "title": "Let's Twist Again", 
     "artist": "Chubby Checker", 
     "year": 1961,
@@ -2839,6 +2839,34 @@
     "title": "That's Why You Go Away", 
     "artist": "Michael Lerns", 
     "year": 1995,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "zRIbf6JqkNc", 
+    "title": "Don't Cry", 
+    "artist": "Guns N' Roses", 
+    "year": 1991,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "a-Lp2uC_1lg", 
+    "title": "From This Moment On", 
+    "artist": "Shania Twain", 
+    "year": 1997,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "IlV7RhT6zHs", 
+    "title": "I'm Not A Girl, Not Yet a Woman", 
+    "artist": "Britney Spears", 
+    "year": 2002,
+    "genre": "Pop" 
+  },
+  {
+    "id":  "44_qWFAdjqQ", 
+    "title": "One Day in Your Life", 
+    "artist": "Michael Jackson", 
+    "year": 1975,
     "genre": "Pop" 
   }   
 ]
